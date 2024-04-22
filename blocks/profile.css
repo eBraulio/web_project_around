@@ -27,8 +27,11 @@
   line-height: 113%;
   text-align: left;
   margin: 0;
+
   text-overflow: ellipsis;
+  white-space: nowrap;
   overflow: hidden;
+
   max-width: 404px;
 }
 
