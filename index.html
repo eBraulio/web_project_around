@@ -139,6 +139,33 @@
           </div>
         </section>
       </main>
+
+      <div class="popup">
+        <div class="popup__container">
+          <h2 class="popup__title">Editar Perfil</h2>
+          <form class="popup__edit" id="popup__edit-form">
+            <input
+              class="popup__input popup__input-name"
+              type="text"
+              id="name"
+              required
+              minlength="2"
+              maxlength="40"
+            />
+            <input
+              class="popup__input popup__input-description"
+              type="text"
+              id="description"
+              required
+              minlength="2"
+              maxlength="40"
+            />
+            <button class="popup__save-button" type="submit">Guardar</button>
+            <button class="popup__close-button"></button>
+          </form>
+        </div>
+      </div>
+
       <footer class="footer">
         <h2 class="footer-copyright">&#169;2024 Braulio Bañuelos</h2>
       </footer>
