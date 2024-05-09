@@ -7,7 +7,7 @@
   max-width: 880px;
 }
 
-.element {
+.template__element {
   border-radius: 10px;
   overflow: hidden;
   background-color: #fff;
@@ -31,11 +31,17 @@
   transition: 0.4s ease-in all;
 }
 
-.element__image {
+.element__image-container {
   z-index: 0;
   width: 100%;
   height: 282px;
   padding: 0;
+}
+
+.element__image {
+  width: inherit;
+  height: inherit;
+  object-fit: cover;
 }
 
 .element__button {
@@ -75,12 +81,24 @@
   transition: 0.4s ease-in all;
 }
 
-.element__like-button:active {
+.element__like-button-active {
   background-image: url(../images/vector/like-icon-black.svg);
   transition: 0.2s ease-in all;
   width: 21px;
   height: 19px;
   opacity: 100%;
+}
+
+.element__title {
+  background-color: unset;
+  margin: 0;
+  padding: 0;
+  font-family: Inter;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.5;
+  text-align: left;
+  color: white;
 }
 
 @media screen and (min-width: 768px) and (max-width: 1024px) {
