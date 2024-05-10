@@ -175,6 +175,11 @@
     z-index: 2;
   }
 
+  .popup__close-image {
+    top: -41px;
+    right: -41px;
+  }
+
   .popup__input {
     width: 100%;
     height: 17px;
