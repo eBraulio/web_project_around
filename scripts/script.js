@@ -1,38 +1,19 @@
-// let profileAddButton = document.querySelector(".profile__add-button");
-// let popupCloseButton = document.querySelector(".popup__close-button");
-// let popup = document.querySelector(".popup");
-// let popupAddPlace = document.querySelector(".popup__add-place");
-// let profileNameElement = document.querySelector(".profile__name");
-// let profileDescriptionElement = document.querySelector(".profile__description");
-// let popupInputName = document.querySelector(".popup__input-name");
-// let popupInputDescription = document.querySelector(".popup__input-description");
-// let profileForm = document.querySelector(".popup__edit");
 const editButton = document.querySelector(".profile__edit-button");
-const nameInput = document.querySelector("#text-input-name");
-const aboutInput = document.querySelector("#text-input-about");
+const nameInput = document.querySelector(".popup__input-name");
+const descriptionInput = document.querySelector(".popup__input-description");
 const profileName = document.querySelector(".profile__name");
-const profileAbout = document.querySelector(".profile__description");
+const profileDescription = document.querySelector(".profile__description");
 const popupProfile = document.querySelector(".popup__profile");
-
-const addButton = document.querySelector("#add-button");
-const placeInput = document.querySelector("#add-name");
-const linkInput = document.querySelector("#url-adress");
+const addButton = document.querySelector(".profile__add-button");
+const placeInput = document.querySelector(".popup__add-name");
+const adressInput = document.querySelector(".popup__add-adress");
 const placeName = document.querySelector(".element__text");
-const linkUrl = document.querySelector(".element__image");
+const adressUrl = document.querySelector(".element__image");
 const popupPlace = document.querySelector(".popup__add-place");
-
 const cards = document.querySelectorAll(".template__element");
-const popupImage = document.querySelector("#image-popup");
+const popupImage = document.querySelector(".popup__element");
 const cardsContainer = document.querySelector(".elements");
-
 const closeButton = document.querySelectorAll(".popup__close-button");
-
-editButton.addEventListener("click", function openProfileEdit() {
-  popupProfile.classList.add("popup__opened");
-  nameInput.value = profileName.textContent;
-  aboutInput.value = profileAbout.textContent;
-});
-
 const initialCards = [
   {
     placeName: "Detroit Downtown",
@@ -60,12 +41,16 @@ const initialCards = [
   },
 ];
 
+editButton.addEventListener("click", function openProfileEdit() {
+  popupProfile.classList.add("popup__opened");
+  nameInput.value = profileName.textContent;
+  descriptionInput.value = profileDescription.textContent;
+});
+
 addButton.addEventListener("click", function openPlaceEdit(evt) {
   evt.preventDefault();
   popupPlace.classList.add("popup__opened");
 });
-
-//////////////////////////////
 
 function createCards(placeName, link) {
   const cardTemplate = document.querySelector("#template__elements").content;
@@ -106,8 +91,6 @@ initialCards.forEach((item) => {
   cardsContainer.append(cardElement);
 });
 
-///////////////////////////////
-
 closeButton.forEach((item) => {
   item.addEventListener("click", function close() {
     popupProfile.classList.remove("popup__opened");
@@ -119,7 +102,7 @@ closeButton.forEach((item) => {
 function handleProfileFormSubmit(evt) {
   evt.preventDefault();
   profileName.textContent = nameInput.value;
-  profileAbout.textContent = aboutInput.value;
+  profileDescription.textContent = descriptionInput.value;
   popupProfile.classList.remove("popup__opened");
 }
 
@@ -127,13 +110,13 @@ popupProfile.addEventListener("submit", handleProfileFormSubmit);
 
 function handlePlaceFormSubmit(evt) {
   evt.preventDefault();
-  const cardElement = createCards(placeInput.value, linkInput.value);
+  const cardElement = createCards(placeInput.value, adressInput.value);
 
   cardsContainer.prepend(cardElement);
   popupPlace.classList.remove("popup__opened");
 
   placeInput.value = "";
-  linkInput.value = "";
+  adressInput.value = "";
 }
 
 popupPlace.addEventListener("submit", handlePlaceFormSubmit);

@@ -34,18 +34,16 @@
           <div class="profile__info">
             <div class="profile__info-container">
               <p class="profile__name">Jacques Cousteau</p>
-              <button id = "edit-button" type="button" class="profile__edit-button"></button>
+              <button class="profile__edit-button" type="button"></button>
             </div>
             <p class="profile__description">Explorador</p>
           </div>
-          <button class="profile__add-button"
-            id="add-button"
-            type="button"></button>
+          <button class="profile__add-button" type="button"></button>
           </button>
         </section>
         <section class="elements"></section>
       </main>
-      <!-- ------------------------PROFILE-------------------------------------- -->
+      <!-- PROFILE -->
       <div class="popup popup__profile">
         <div class="popup__container">
           <h2 class="popup__title">Editar Perfil</h2>
@@ -53,27 +51,23 @@
             <input
               class="popup__input popup__input-name"
               type="text"
-              id="text-input-name"
+              id="profile-name"
               value="Jacques Cousteau"
               required
-              minlength="2"
-              maxlength="40"
             />
             <input
               class="popup__input popup__input-description"
               type="text"
-              id="text-input-about"
+              id="profile-about"
               value="Explorador"
               required
-              minlength="2"
-              maxlength="40"
             />
             <button class="popup__save-button" type="submit">Guardar</button>
             <button class="popup__close-button popup__close-form"></button>
           </form>
         </div>
       </div>
-      <!-- ------------------------PLACES---------------------- -->
+      <!-- POPUP PLACES FORM -->
       <div class="popup popup__add-place">
         <div class="popup__container">
           <h2 class="popup__title">Nuevo Lugar</h2>
@@ -84,8 +78,6 @@
               id="add-name"
               placeholder="Título"
               required
-              minlength="2"
-              maxlength="40"
             />
             <input
               class="popup__input popup__add-adress"
@@ -100,7 +92,7 @@
           </form>
         </div>
       </div>
-      <!-- ------------------------IMAGE---------------------- -->
+      <!-- POP IMAGE FORM -->
       <div class="popup popup__element" id="image-popup">
         <div class="popup__content-image">
           <button class="popup__close-button popup__close-image"></button>
@@ -108,7 +100,7 @@
           <p class="popup__element-title"></p>
         </div>
       </div>
-      <!-- ------------------------TEMPLATE------------------- -->
+      <!-- ELEMENTS TEMPLATE -->
       <template id="template__elements">
         <div class="template__element">
           <img
@@ -130,7 +122,7 @@
           </div>
         </div>
       </template>
-      <!-- --------------------END-TEMPLATE------------------- -->
+
       <footer class="footer">
         <h2 class="footer-copyright">&#169;2024 Braulio Bañuelos</h2>
       </footer>
