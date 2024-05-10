@@ -130,6 +130,7 @@
   opacity: 60%;
   transition: 0.4s ease-in all;
 }
+
 .popup__element-image {
   max-width: 75vw;
   max-height: 75vh;
@@ -142,11 +143,12 @@
   margin: 10px 0;
   padding: 0;
   font-family: Inter;
-  font-size: 12px;
+  font-style: normal;
   font-weight: 400;
-  line-height: 1.5;
-  text-align: left;
-  color: white;
+  font-size: 12px;
+  line-height: 15px;
+
+  color: #ffffff;
 }
 
 @media screen and (max-width: 768px) {
