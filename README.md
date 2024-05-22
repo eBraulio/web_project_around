@@ -1,8 +1,8 @@
 # Tripleten web_project_around
 
-\*Página desarrollada para el Sprint 6 "Lógica y métodos de programación en JavaScript", del curso de WEB Developer de TRIPLETEN.
+\*Página desarrollada para el Sprint 7 "Manejo de objetos y eventos en JavaScript", del curso de WEB Developer de TRIPLETEN.
 
-\*Esta pàgina WEB fue desarrolada como proyecto final del sexto sprint del curso de Web Developer.
+\*Esta pàgina WEB fue desarrolada como proyecto final del séptimo sprint del curso de Web Developer.
 Fue creada utilizando HTML y CSS, considerando el diseño compartido en Figma, y aplicando la metodología BEM, así como grid layout y flexbox.
 La página web se desarrolló de forma adaptativa para ser visualizada en dispositivos desktop, tablets y mobiles, con óptimización en 320, 768 y 1280 px.
 Git Hub fue usada como herramienta para organizar y actualizar el proyecto en el repositorio en línea.
@@ -21,6 +21,7 @@ Git Hub fue usada como herramienta para organizar y actualizar el proyecto en el
 - JavaScript
 - DOM
 - GitHub
+  -Validación de formularios
 
 \*Planes a futuro:
 
@@ -33,6 +34,10 @@ Git Hub fue usada como herramienta para organizar y actualizar el proyecto en el
 09/05/2024:
 -Implementación de Javascript para otras funciones de la página (agregar, eliminar fotorgrafías, dar "Like", etc.)
 -Correción de Ellipsis para el Profile name.
+
+21/05/2024:
+-Agregar validación de formularios
+-Cerrar ventanas emergentes con tecla ESC y click fuera de la ventana emergente.
 
 \*Link en GitHub:
 https://eBraulio.github.io/web_project_around/

@@ -44,23 +44,33 @@
       </main>
       <!-- PROFILE -->
       <div class="popup" id="popup-profile">
+        <div class="popup__overlay" id="popup-overlay-edit"></div>
         <div class="popup__container">
           <h2 class="popup__title">Editar Perfil</h2>
-          <form class="popup__edit" id="popup__edit-form">
+          <form class="popup__edit" id="popup__edit-form" novalidate>
             <input
               class="popup__input popup__input-name"
               type="text"
-              id="profile-name"
+              id="popup__input-name"
               value="Jacques Cousteau"
+              minlength="2"
+              maxlength="40"
               required
             />
+            <span class="popup__error" id="popup__input-name-error"></span>
             <input
               class="popup__input popup__input-description"
               type="text"
-              id="profile-about"
+              id="popup__input-description"
               value="Explorador"
+              minlength="2"
+              maxlength="200"
               required
             />
+            <span
+              class="popup__error"
+              id="popup__input-description-error"
+            ></span>
             <button class="popup__save-button" type="submit">Guardar</button>
             <button class="popup__close-button popup__close-form"></button>
           </form>
@@ -68,23 +78,28 @@
       </div>
       <!-- POPUP PLACES FORM -->
       <div class="popup" id="place-popup">
+        <div class="popup__overlay" id="popup-overlay-add"></div>
         <div class="popup__container">
           <h2 class="popup__title">Nuevo Lugar</h2>
-          <form class="popup__edit" id="popup__add-form">
+          <form class="popup__edit" id="popup__add-form" novalidate>
             <input
               class="popup__input popup__add-name"
               type="text"
-              id="add-name"
+              id="popup__add-name"
               placeholder="Título"
+              minlength="2"
+              maxlength="30"
               required
             />
+            <span class="popup__error" id="popup__add-name-error"></span>
             <input
               class="popup__input popup__add-adress"
               type="url"
-              id="url-adress"
+              id="popup__add-adress"
               placeholder="Enlace a la imagen"
               required
             />
+            <span class="popup__error" id="popup__add-adress-error"></span>
             <button class="popup__save-button" type="submit">Crear</button>
             <button class="popup__close-button popup__close-form"></button>
           </form>
@@ -92,6 +107,7 @@
       </div>
       <!-- POP IMAGE FORM -->
       <div class="popup" id="image-popup">
+        <div class="popup__overlay" id="popup-overlay-image"></div>
         <div class="popup__content-image">
           <button class="popup__close-button popup__close-image"></button>
           <img class="popup__element-image" src=" " alt=" " />
@@ -126,5 +142,7 @@
       </footer>
     </div>
     <script src="./scripts/script.js"></script>
+    <script src="./scripts/validation.js"></script>
+    <script src="./scripts/closePopups.js"></script>
   </body>
 </html>
