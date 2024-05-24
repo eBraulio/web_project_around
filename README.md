@@ -36,8 +36,8 @@ Git Hub fue usada como herramienta para organizar y actualizar el proyecto en el
 -Correción de Ellipsis para el Profile name.
 
 21/05/2024:
--Agregar validación de formularios
--Cerrar ventanas emergentes con tecla ESC y click fuera de la ventana emergente.
+\n-Agregar validación de formularios
+\n-Cerrar ventanas emergentes con tecla ESC y click fuera de la ventana emergente.
 
 \*Link en GitHub:
 https://eBraulio.github.io/web_project_around/
