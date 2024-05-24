@@ -32,12 +32,14 @@ Git Hub fue usada como herramienta para organizar y actualizar el proyecto en el
 \*Actualizaciones:
 
 09/05/2024:
--Implementación de Javascript para otras funciones de la página (agregar, eliminar fotorgrafías, dar "Like", etc.)
--Correción de Ellipsis para el Profile name.
+
+- Implementación de Javascript para otras funciones de la página (agregar, eliminar fotorgrafías, dar "Like", etc.)
+- Correción de Ellipsis para el Profile name.
 
 21/05/2024:
-\n-Agregar validación de formularios
-\n-Cerrar ventanas emergentes con tecla ESC y click fuera de la ventana emergente.
+
+- Agregar validación de formularios
+- Cerrar ventanas emergentes con tecla ESC y click fuera de la ventana emergente.
 
 \*Link en GitHub:
 https://eBraulio.github.io/web_project_around/
