@@ -44,6 +44,8 @@ Git Hub fue usada como herramienta para organizar y actualizar el proyecto en el
 23/05/2024:
 
 - Agregar formato en README.
+- Agregar formato a closePopups.js-
+- Corroegir que formulario no se cierrer al hacer click sobre el mismo formulario.
 
 \*Link en GitHub:
 https://eBraulio.github.io/web_project_around/
