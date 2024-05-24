@@ -1,24 +1,24 @@
-const overlayEdit = document.querySelector("#popup-overlay-edit");
-const overlayAdd = document.querySelector("#popup-overlay-add");
-const overlayImage = document.querySelector("#popup-overlay-image");
+const closeOverlayEdit = document.querySelector("#popup-overlay-edit");
+const closeOverlayAdd = document.querySelector("#popup-overlay-add");
+const closeOverlayImage = document.querySelector("#popup-overlay-image");
 
-function handleOverlayClick(event) {
-  if (event.target.classList.contains("popup__overlay")) {
+function closeWithClick(evt) {
+  if (evt.target.classList.contains("popup__overlay")) {
     popupProfile.classList.remove("popup__opened");
     popupPlace.classList.remove("popup__opened");
     popupImage.classList.remove("popup__opened");
   }
 }
 
-function closeWithEsc(event) {
-  if (event.key === "Escape") {
+function closeWithEsc(evt) {
+  if (evt.key === "Escape") {
     popupProfile.classList.remove("popup__opened");
     popupPlace.classList.remove("popup__opened");
     popupImage.classList.remove("popup__opened");
   }
 }
 
-overlayEdit.addEventListener("click", handleOverlayClick);
-overlayAdd.addEventListener("click", handleOverlayClick);
-overlayImage.addEventListener("click", handleOverlayClick);
+closeOverlayEdit.addEventListener("click", closeWithClick);
+closeOverlayAdd.addEventListener("click", closeWithClick);
+closeOverlayImage.addEventListener("click", closeWithClick);
 document.addEventListener("keydown", closeWithEsc);

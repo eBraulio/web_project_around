@@ -76,22 +76,6 @@
   margin-bottom: 48px;
 }
 
-.popup__input-name {
-  /* margin-bottom: 30px; */
-}
-
-.popup__input-description {
-  /* margin-bottom: 48px; */
-}
-
-.popup__add-name {
-  /* margin-bottom: 30px; */
-}
-
-.popup__add-adress {
-  /* margin-bottom: 48px; */
-}
-
 .popup__opened {
   opacity: 0.95;
   pointer-events: unset;
@@ -114,7 +98,7 @@
   display: inline-block;
 }
 
-.popup__button_disabled {
+.popup__button-disabled {
   background-color: white;
   color: #cccccc;
   opacity: 0.3;

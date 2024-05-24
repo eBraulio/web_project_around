@@ -41,5 +41,9 @@ Git Hub fue usada como herramienta para organizar y actualizar el proyecto en el
 - Agregar validación de formularios
 - Cerrar ventanas emergentes con tecla ESC y click fuera de la ventana emergente.
 
+23/05/2024:
+
+- Agregar formato en README.
+
 \*Link en GitHub:
 https://eBraulio.github.io/web_project_around/

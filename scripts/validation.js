@@ -42,7 +42,7 @@ const toggleButtonState = (inputList, buttonElement, settings) => {
     buttonElement.classList.remove(settings.inactiveButtonClass);
   }
 };
-//
+
 const setEventListeners = (formElement, settings) => {
   console.log("2. event listeners");
   const inputList = Array.from(
@@ -78,7 +78,7 @@ enableValidation({
   formSelector: ".popup__edit",
   inputSelector: ".popup__input",
   submitButtonSelector: ".popup__save-button",
-  inactiveButtonClass: "popup__button_disabled",
+  inactiveButtonClass: "popup__button-disabled",
   inputErrorClass: "popup__input_type_error",
   // errorClass: "popup__error_visible",
 });
