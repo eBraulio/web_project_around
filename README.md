@@ -33,13 +33,23 @@ Git Hub fue usada como herramienta para organizar y actualizar el proyecto en el
 
 09/05/2024:
 
+-Sprint 6
+
 - Implementación de Javascript para otras funciones de la página (agregar, eliminar fotorgrafías, dar "Like", etc.)
 - Correción de Ellipsis para el Profile name.
 
 21/05/2024:
 
+-Sprint 7
+
 - Agregar validación de formularios
 - Cerrar ventanas emergentes con tecla ESC y click fuera de la ventana emergente.
+
+23/05/2024:
+
+- Agregar formato en README.
+- Agregar formato a closePopups.js-
+- Corroegir que formulario no se cierrer al hacer click sobre el mismo formulario.
 
 23/05/2024:
 
