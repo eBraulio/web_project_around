@@ -14,6 +14,8 @@
 // const popupImage = document.querySelector("#image-popup");
 // const cardsContainer = document.querySelector(".elements");
 // const closeButton = document.querySelectorAll(".popup__close-button");
+import Card from "./Card.js";
+
 const initialCards = [
   {
     text: "Detroit Downtown",
@@ -46,52 +48,6 @@ const initialCards = [
       "https://images.unsplash.com/photo-1581373449483-37449f962b6c?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
 ];
-
-//Crea la clase Card
-class Card {
-  constructor(data, cardSelector) {
-    this._text = data.text;
-    this._image = data.image;
-    this._cardSelector = cardSelector;
-  }
-
-  //métodos privado para cada controlador de eventos
-  _getTemplate() {
-    const cardElement = document
-      .querySelector(this._cardSelector)
-      .content.querySelectorAll(".template__element")
-      .cloneNode(true);
-
-    return cardElement;
-  }
-
-  //método público que devuelve un elemento card
-  generateCard() {
-    this._element = this._getTemplate();
-    this._element.querySelector(".element__image").src = this._image;
-    this._element.querySelector(".element__text").textContent = this._text;
-
-    this._setEventListeners();
-
-    return this._element;
-  }
-
-  //métodos privado para cada controlador de eventos
-  _setEventListeners() {
-    this._element
-      .querySelector(".element__like-button")
-      .addEventListener("click", () => {
-        this._handleMessageClick();
-      });
-  }
-
-  //métodos privado para cada controlador de eventos
-  _handleMessageClick() {
-    this._element
-      .querySelector(".element__like-button")
-      .classList.toggle("element__like-button-active");
-  }
-}
 
 //Crea una instancia de la clase Card para cada tarjeta.
 initialCards.forEach((item) => {
