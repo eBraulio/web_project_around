@@ -1,84 +1,83 @@
-//Crea la clase Card
-export default class Card {
-  constructor(data, cardSelector) {
-    this._text = data.text;
-    this._image = data.image;
+export class Card {
+  constructor(data, cardSelector, array) {
+    this._id = this._createUniqueId();
+    this._name = data.name;
+    this._url = data.url;
     this._cardSelector = cardSelector;
+    this._array = array;
   }
 
-  //métodos privado para cada controlador de eventos
+  _createUniqueId() {
+    return Math.floor(Math.random() * new Date().getTime() * 3).toString();
+  }
+
+  //función para clonar la plantilla
   _getTemplate() {
-    const cardElement = document
+    const newCard = document
       .querySelector(this._cardSelector)
       .content.querySelector(".template__element")
       .cloneNode(true);
-    return cardElement;
+    return newCard;
   }
 
-  //método público que devuelve un elemento card
+  _setEventListeners() {
+    this._popupImage = document.querySelector("#image-popup");
+    this._popupOverlay = document.querySelector(".popup__overlay");
+
+    this._element.addEventListener("click", (evt) => {
+      //evento para funcionalidad del boton de like
+      if (evt.target.classList.contains("element__like-button")) {
+        evt.target.classList.toggle("element__like-button-active");
+      }
+      //evento para mostrar el popUp de la visualización de la imagen
+      if (evt.target.classList.contains("element__image")) {
+        this._showPopUpImage(this._popupImage, this._popupOverlay);
+        const imageValue = this._popupImage.querySelector(
+          ".popup__element-image"
+        );
+        imageValue.src = evt.target.currentSrc;
+        imageValue.alt = evt.target.alt;
+        const imageTitle = this._popupImage.querySelector(
+          ".popup__element-title"
+        );
+        imageTitle.textContent = evt.target.alt;
+        document.addEventListener("keydown", this._closePopUpImageEscapeKey);
+      }
+      //evento para funcionalidad del boton de eliminar
+      if (evt.target.classList.contains("element__trash-icon")) {
+        evt.target.closest(".template__element").remove(); ///CHECK!!!!!
+        // let indiceEliminar = this._array.findIndex(
+        //   (element) => element.id === evt.target.previousElementSibling.id
+        // );
+        // this._array.splice(indiceEliminar, 1);
+      }
+    });
+  }
+  //Función para mostrar el popUp de la visualización de la imagen
+  _showPopUpImage(popup, overlay) {
+    popup.classList.add("popup__opened");
+    overlay.classList.add("popup__overlay"); ///CHECK!!!!!
+  }
+
+  _closePopUpImageEscapeKey(evt) {
+    this._popupImage = document.querySelector("#image-popup");
+    this._popupOverlay = document.querySelector(".popup__overlay");
+    if (evt.key === "Escape") {
+      this._popupImage.classList.remove("popup__opened");
+      this._popupOverlay.classList.remove("popup__overlay");
+    }
+  }
+
+  //función para crear la tarjeta
   generateCard() {
     this._element = this._getTemplate();
-    this._element.querySelector(".element__image").src = this._image;
-    this._element.querySelector(".element__text").alt = this._title;
-    this._element.querySelector(".element__text").textContent = this._text;
+    this._setEventListeners();
 
-    this._element
-      .querySelector(".element__like-button")
-      .addEventListener("click", () => this._activeLike());
-
-    this._element
-      .querySelector(".element__trash-icon")
-      .addEventListener("click", () => this._trashCard());
-
-    this._element
-      .querySelector(".element__image")
-      .addEventListener("click", () => this._zoomImage());
+    this._element.querySelector(".element__image").src = this._url;
+    this._element.querySelector(".element__image").alt = this._name;
+    this._element.querySelector(".element__image").setAttribute("id", this._id);
+    this._element.querySelector(".element__text").textContent = this._name;
 
     return this._element;
-  }
-
-  //métodos privado para cada controlador de eventos
-  _activeLike() {
-    const buttonLike = this._element.querySelector(".element__like-button");
-    if (buttonLike.classList.contains("active")) {
-      buttonLike.classList.remove("element__like-button-active");
-    } else {
-      buttonLike.classList.toggle("element__like-button-active");
-    }
-  }
-
-  //métodos privado para cada controlador de eventos
-  _trashCard() {
-    this._buttonTrash = this._element.querySelector(".element__trash-icon");
-    this._element.remove(this._buttonTrash);
-  }
-
-  //métodos privado para cada controlador de eventos
-  _zoomImage() {
-    this._imagePopout = document.querySelector("#image-popup");
-    this._overlayPopout = document.querySelector("#popup-overlay-image");
-
-    this._imagePopout.classList.add("popup__opened");
-    this._overlayPopout.classList.add("popup__overlay");
-
-    document.querySelector(".popup__element-image").src =
-      this._element.querySelector(".element__image").src;
-    document.querySelector(".popup__element-image").alt =
-      this._element.querySelector(".element__text").textContent;
-    document.querySelector(".popup__element-title").textContent =
-      this._element.querySelector(".element__text").textContent;
-
-    document.addEventListener("keydown", (evt) => this._escapeKeyClose(evt));
-
-    return this._imagePopout;
-  }
-
-  //métodos privado para cada controlador de eventos
-  _escapeKeyClose(evt) {
-    if (evt.key === "Escape") {
-      this._imagePopout.classList.remove("popup__opened");
-      this._overlayPopout.classList.remove("popup__overlay");
-    }
-    document.removeEventListener("keydown", this._escapeKeyClose);
   }
 }

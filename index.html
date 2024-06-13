@@ -22,6 +22,7 @@
           alt="Around EEUU logo"
         />
       </header>
+      <!-- <div class="popup__overlay"></div> -->
       <main class="content">
         <section class="profile">
           <div class="profile__avatar">
@@ -31,6 +32,7 @@
               alt="Profile picture"
             />
           </div>
+          <!--0. DATA -->
           <div class="profile__info">
             <div class="profile__info-container">
               <p class="profile__name">Jacques Cousteau</p>
@@ -42,7 +44,7 @@
         </section>
         <section class="elements" id="elements"></section>
       </main>
-      <!-- PROFILE -->
+      <!--1. POPUP PROFILE -->
       <div class="popup" id="popup-profile">
         <div class="popup__overlay" id="popup-overlay-edit"></div>
         <div class="popup__container">
@@ -71,12 +73,21 @@
               class="popup__error"
               id="popup__input-description-error"
             ></span>
-            <button class="popup__save-button" type="submit">Guardar</button>
-            <button class="popup__close-button popup__close-form"></button>
+            <button
+              class="popup__save-button"
+              id="btn-submit-profile"
+              type="submit"
+            >
+              Guardar
+            </button>
+            <button
+              class="popup__close-button popup__close-form"
+              id="btn-close-profile"
+            ></button>
           </form>
         </div>
       </div>
-      <!-- POPUP PLACES FORM -->
+      <!--2. POPUP PLACES FORM -->
       <div class="popup" id="place-popup">
         <div class="popup__overlay" id="popup-overlay-add"></div>
         <div class="popup__container">
@@ -100,12 +111,21 @@
               required
             />
             <span class="popup__error" id="popup__add-adress-error"></span>
-            <button class="popup__save-button" type="submit">Crear</button>
-            <button class="popup__close-button popup__close-form"></button>
+            <button
+              class="popup__save-button"
+              type="submit"
+              id="btn-submit-place"
+            >
+              Crear
+            </button>
+            <button
+              class="popup__close-button popup__close-form"
+              id="btn-close-place"
+            ></button>
           </form>
         </div>
       </div>
-      <!-- POPUP IMAGE FORM -->
+      <!--3. POPUP IMAGE FORM -->
       <div class="popup" id="image-popup">
         <div class="popup__overlay" id="popup-overlay-image"></div>
         <div class="popup__content-image">
@@ -114,7 +134,7 @@
           <p class="popup__element-title"></p>
         </div>
       </div>
-      <!-- ELEMENTS TEMPLATE -->
+      <!--4.  ELEMENTS TEMPLATE -->
       <template id="template__elements">
         <div class="template__element">
           <img
@@ -142,6 +162,8 @@
       </footer>
     </div>
     <script src="./scripts/script.js" type="module"></script>
-    <script src="./scripts/validation.js"></script>
+    <script type="module" src="./scripts/utils.js"></script>
+    <script type="module" src="./scripts/Card.js"></script>
+    <script type="module" src="./scripts/validation.js"></script>
   </body>
 </html>
