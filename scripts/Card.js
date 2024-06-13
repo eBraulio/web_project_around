@@ -1,12 +1,11 @@
 export class Card {
-  constructor(data, cardSelector, array) {
+  constructor(data, cardSelector) {
     this._name = data.name;
     this._url = data.url;
     this._cardSelector = cardSelector;
-    this._array = array;
   }
 
-  //función para clonar la plantilla
+  //Función para clonar plantilla
   _getTemplate() {
     const newCard = document
       .querySelector(this._cardSelector)
@@ -14,17 +13,17 @@ export class Card {
       .cloneNode(true);
     return newCard;
   }
-
+  //métodos privados para cada controlador de eventos
   _setEventListeners() {
     this._popupImage = document.querySelector("#image-popup");
     this._popupOverlay = document.querySelector(".popup__overlay");
 
     this._element.addEventListener("click", (evt) => {
-      //evento para funcionalidad del boton de like
+      //Botón de like
       if (evt.target.classList.contains("element__like-button")) {
         evt.target.classList.toggle("element__like-button-active");
       }
-      //evento para mostrar el popUp de la visualización de la imagen
+      //PopUp de la visualización de la imagen
       if (evt.target.classList.contains("element__image")) {
         this._showPopUpImage(this._popupImage, this._popupOverlay);
         const imageValue = this._popupImage.querySelector(
@@ -38,18 +37,18 @@ export class Card {
         imageTitle.textContent = evt.target.alt;
         document.addEventListener("keydown", this._closePopUpImageEscapeKey);
       }
-      //evento para funcionalidad del boton de eliminar
+      //Eliminar mediante X
       if (evt.target.classList.contains("element__trash-icon")) {
         evt.target.closest(".template__element").remove();
       }
     });
   }
-  //Función para mostrar el popUp de la visualización de la imagen
+  //Función para mostrar popup de la imagen
   _showPopUpImage(popup, overlay) {
     popup.classList.add("popup__opened");
     overlay.classList.add("popup__overlay");
   }
-
+  //Función para cerrar con ESC
   _closePopUpImageEscapeKey(evt) {
     this._popupImage = document.querySelector("#image-popup");
     this._popupOverlay = document.querySelector(".popup__overlay");
@@ -59,14 +58,13 @@ export class Card {
     }
   }
 
-  //función para crear la tarjeta
+  //método público que devuelve un elemento card
   generateCard() {
     this._element = this._getTemplate();
     this._setEventListeners();
 
     this._element.querySelector(".element__image").src = this._url;
     this._element.querySelector(".element__image").alt = this._name;
-    this._element.querySelector(".element__image").setAttribute("id", this._id);
     this._element.querySelector(".element__text").textContent = this._name;
 
     return this._element;

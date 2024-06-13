@@ -5,7 +5,6 @@ import { cardsContainer, initialCards } from "./utils.js";
   cardsContainer.innerHTML = "";
   initialCards.forEach((initialCard) => {
     const card = new Card(initialCard, "#template__elements", initialCards);
-    initialCard.id = card._id;
     const cardElement = card.generateCard();
     cardsContainer.prepend(cardElement);
   });

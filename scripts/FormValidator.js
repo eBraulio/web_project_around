@@ -8,12 +8,13 @@ const validationConfig = {
   errorSelector: ".popup__error",
 };
 
+//Clase FromValidator con constructor con dos parámetros
 export class FormValidator {
   constructor(popup, config = validationConfig) {
     this._popup = popup.querySelector(".popup__edit");
     this._config = config;
   }
-
+  // método privado para procesar el formulario
   _showError = (
     formElement,
     inputElement,
@@ -26,14 +27,14 @@ export class FormValidator {
     errorElement.textContent = errorMessage;
     errorElement.classList.add(errorClass);
   };
-
+  // método privado para procesar el formulario
   _hideError = (formElement, inputElement, inputErrorClass, errorClass) => {
     const errorElement = formElement.querySelector(`#${inputElement.id}-error`);
     inputElement.classList.remove(inputErrorClass);
     errorElement.classList.remove(errorClass);
     errorElement.textContent = "";
   };
-
+  // método privado para procesar el formulario
   _checkInputValidity = (
     formElement,
     inputElement,
@@ -52,13 +53,13 @@ export class FormValidator {
       this._hideError(formElement, inputElement, inputErrorClass, errorClass);
     }
   };
-
+  // método privado para procesar el formulario
   _hasInvalidInput = (inputList) => {
     return inputList.some((inputElement) => {
       return !inputElement.validity.valid;
     });
   };
-
+  // método privado para activar botones
   _toggleButtonState = (inputList, buttonElement, inactiveButtonClass) => {
     if (this._hasInvalidInput(inputList)) {
       buttonElement.classList.add(inactiveButtonClass);
@@ -66,7 +67,7 @@ export class FormValidator {
       buttonElement.classList.remove(inactiveButtonClass);
     }
   };
-
+  // método privado para eventos
   _setEventListeners = (
     formElement,
     inputSelector,
@@ -90,7 +91,7 @@ export class FormValidator {
       });
     });
   };
-
+  //método público que activa la validación del formulario
   enableValidation = () => {
     const formList = Array.from(
       document.querySelectorAll(this._config.formSelector)
@@ -109,7 +110,7 @@ export class FormValidator {
       );
     });
   };
-
+  //método para hacer reset de la validación del formulario
   resetValidation = () => {
     const inputList = Array.from(
       document.querySelectorAll(this._config.inputSelector)
