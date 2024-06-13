@@ -1,5 +1,5 @@
 import { Card } from "./Card.js";
-import { FormValidator } from "./validation.js";
+import { FormValidator } from "./FormValidator.js";
 
 //elementos que se editan en la seccion de profile
 const profileName = document.querySelector(".profile__name");
@@ -84,7 +84,6 @@ function closePopUp(popup, overlay) {
 //Función para ocultar el popUp de la visualización de la imagen
 function closePopUpImage(popup, overlay) {
   popup.classList.remove("popup__opened");
-  //overlay.classList.remove("popup__overlay");
   document.removeEventListener("keydown", closeAnyPopUpEscapeKey);
 }
 
@@ -115,8 +114,6 @@ editButtonProfile.addEventListener("click", () => {
   popupAboutProfile.value = document.querySelector(
     ".profile__description"
   ).textContent;
-  //confirmButtonProfile.classList.add("popup__button-disabled");
-  //confirmButtonProfile.setAttribute("disabled", true);
 });
 
 //cierra la ventana popUp Profile al dar click en el icono de X (cerrar)
@@ -172,14 +169,7 @@ popupImage.addEventListener("click", (evt) => {
   }
 });
 
-// popupOverlay.addEventListener("click", (evt) => {
-//   if (evt.target.classList.contains("popup__overlay")) {
-//     closeAnyPopUp();
-//   }
-// });
-
 //cierra las ventanas popUps cuando se de click en la superposición
-popupOverlay.addEventListener("click", closeAnyPopUp);
 closeOverlayImage.addEventListener("click", closeAnyPopUp);
 closeOverlayAdd.addEventListener("click", closeAnyPopUp);
 closeOverlayEdit.addEventListener("click", closeAnyPopUp);

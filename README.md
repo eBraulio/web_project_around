@@ -57,5 +57,10 @@ Git Hub fue usada como herramienta para organizar y actualizar el proyecto en el
 - Agregar formato a closePopups.js-
 - Corroegir que formulario no se cierrer al hacer click sobre el mismo formulario.
 
+12/06/2024:
+
+- Se agregan funcionalidades del Sprint 8.
+- Clases Card y FormValidator funcionando correctamente.
+
 \*Link en GitHub:
 https://eBraulio.github.io/web_project_around/

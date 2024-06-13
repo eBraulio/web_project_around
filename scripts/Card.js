@@ -1,14 +1,9 @@
 export class Card {
   constructor(data, cardSelector, array) {
-    this._id = this._createUniqueId();
     this._name = data.name;
     this._url = data.url;
     this._cardSelector = cardSelector;
     this._array = array;
-  }
-
-  _createUniqueId() {
-    return Math.floor(Math.random() * new Date().getTime() * 3).toString();
   }
 
   //función para clonar la plantilla
@@ -45,18 +40,14 @@ export class Card {
       }
       //evento para funcionalidad del boton de eliminar
       if (evt.target.classList.contains("element__trash-icon")) {
-        evt.target.closest(".template__element").remove(); ///CHECK!!!!!
-        // let indiceEliminar = this._array.findIndex(
-        //   (element) => element.id === evt.target.previousElementSibling.id
-        // );
-        // this._array.splice(indiceEliminar, 1);
+        evt.target.closest(".template__element").remove();
       }
     });
   }
   //Función para mostrar el popUp de la visualización de la imagen
   _showPopUpImage(popup, overlay) {
     popup.classList.add("popup__opened");
-    overlay.classList.add("popup__overlay"); ///CHECK!!!!!
+    overlay.classList.add("popup__overlay");
   }
 
   _closePopUpImageEscapeKey(evt) {
