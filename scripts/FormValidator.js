@@ -1,13 +1,3 @@
-const validationConfig = {
-  formSelector: ".popup__edit",
-  inputSelector: ".popup__input",
-  submitButtonSelector: ".popup__save-button",
-  inactiveButtonClass: "popup__button-disabled",
-  inputErrorClass: "popup__input_type_error",
-  errorClass: "popup__input_type_error",
-  errorSelector: ".popup__error",
-};
-
 //Clase FromValidator con constructor con dos parámetros
 export class FormValidator {
   constructor(popup, config = validationConfig) {

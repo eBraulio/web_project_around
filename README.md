@@ -61,6 +61,8 @@ Git Hub fue usada como herramienta para organizar y actualizar el proyecto en el
 
 - Se agregan funcionalidades del Sprint 8.
 - Clases Card y FormValidator funcionando correctamente.
+- Evitar subir form con Enter aún cuando los campos no pasen la validación
+- Importar las clases Card y FormValidator en script.js
 
 \*Link en GitHub:
 https://eBraulio.github.io/web_project_around/
