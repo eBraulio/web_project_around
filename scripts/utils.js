@@ -30,7 +30,7 @@ const closeOverlayImage = document.querySelector("#popup-overlay-image");
 const popupImage = document.querySelector("#image-popup");
 
 //Función para mostrar el popUp - Forms
-export function showPopUp(popup, overlay) {
+function showPopUp(popup, overlay) {
   popup.classList.add("popup__opened");
   overlay.classList.add("popup__overlay");
   document.addEventListener("keydown", closeAnyPopUpEscapeKey);
@@ -46,27 +46,27 @@ export function closePopUp(popup, overlay) {
 }
 
 //Función para ocultar el popUp - Imagen
-export function closePopUpImage(popup, overlay) {
+function closePopUpImage(popup, overlay) {
   popup.classList.remove("popup__opened");
   document.removeEventListener("keydown", closeAnyPopUpEscapeKey);
 }
 
 //Función para cerrar popUps - All
-export function closeAnyPopUp() {
+function closeAnyPopUp() {
   closePopUp(popupProfile, closeOverlayEdit);
   closePopUp(popupPlace, closeOverlayAdd); //
   closePopUpImage(popupImage, closeOverlayImage); //
 }
 
 //Función para cerrar popups con ESC
-export function closeAnyPopUpEscapeKey(evt) {
+function closeAnyPopUpEscapeKey(evt) {
   if (evt.key === "Escape") {
     closeAnyPopUp();
   }
 }
 
 //Función para editar forms - perfil y profesión
-export function editProfile(name, about) {
+function editProfile(name, about) {
   profileName.textContent = name;
   profileDescription.textContent = about;
 }
@@ -104,24 +104,6 @@ cancelButtonPlace.addEventListener("click", () => {
   closePopUp(popupPlace, closeOverlayAdd);
   confirmButtonPlace.classList.add("popup__button-disabled");
 });
-
-// //Agrega nueva card
-// confirmButtonPlace.addEventListener("click", () => {
-//   //se crea un nuevo objeto con los valores de los inputs
-//   const newCard = {
-//     name: popupNamePlace.value,
-//     url: popupUrlPlace.value,
-//   };
-//   //se crea una nueva clase del obejor Card
-//   const card = new Card(newCard, "#template__elements", initialCards);
-//   //se genera la nueva tarjeta
-//   const cardElement = card.generateCard();
-//   //se inserta en el html
-//   cardsContainer.prepend(cardElement);
-//   //se inserta el obejto en el arreglo inicial
-//   initialCards.push(newCard);
-//   closePopUp(popupPlace, closeOverlayAdd);
-// });
 
 //cierra el popup de imagen con X
 popupImage.addEventListener("click", (evt) => {
