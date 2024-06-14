@@ -25,7 +25,6 @@ const cancelButtonPlace = popupPlace.querySelector("#btn-close-place");
 const confirmButtonPlace = popupPlace.querySelector("#btn-submit-place");
 
 //Overlay
-//const popupOverlay = document.querySelector(".popup__overlay");
 const closeOverlayEdit = document.querySelector("#popup-overlay-edit");
 const closeOverlayAdd = document.querySelector("#popup-overlay-add");
 const closeOverlayImage = document.querySelector("#popup-overlay-image");

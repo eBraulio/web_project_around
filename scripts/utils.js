@@ -21,7 +21,6 @@ const cancelButtonPlace = popupPlace.querySelector("#btn-close-place");
 const confirmButtonPlace = popupPlace.querySelector("#btn-submit-place");
 
 //Overlay
-//const popupOverlay = document.querySelector(".popup__overlay");
 const closeOverlayEdit = document.querySelector("#popup-overlay-edit");
 const closeOverlayAdd = document.querySelector("#popup-overlay-add");
 const closeOverlayImage = document.querySelector("#popup-overlay-image");
@@ -34,7 +33,6 @@ function showPopUp(popup, overlay) {
   popup.classList.add("popup__opened");
   overlay.classList.add("popup__overlay");
   document.addEventListener("keydown", closeAnyPopUpEscapeKey);
-  //new FormValidator(popup).enableValidation();
 }
 
 //Función para ocultar el popUp - Forms
@@ -42,7 +40,6 @@ export function closePopUp(popup, overlay) {
   popup.classList.remove("popup__opened");
   overlay.classList.remove("popup__overlay");
   document.removeEventListener("keydown", closeAnyPopUpEscapeKey);
-  //new FormValidator(popup).resetValidation();
 }
 
 //Función para ocultar el popUp - Imagen
