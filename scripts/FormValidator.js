@@ -63,8 +63,10 @@ export class FormValidator {
   _toggleButtonState = (inputList, buttonElement, inactiveButtonClass) => {
     if (this._hasInvalidInput(inputList)) {
       buttonElement.classList.add(inactiveButtonClass);
+      buttonElement.setAttribute("disabled", true); //Evita subir form con Enter aún cuando los campos no pasen la validación
     } else {
       buttonElement.classList.remove(inactiveButtonClass);
+      buttonElement.removeAttribute("disabled"); //Permite subir formcuando los campos pasen la validación
     }
   };
   // método privado para eventos
