@@ -1,9 +1,12 @@
-let someStr = "Programé. Guardé. Empaqueté.";
-console.log("Hello, World!");
-
+import "./styles/index.css"; // agrega la importación del archivo principal de hojas de estilo
+import stepsSrc from "./images/profile_avatar-foto.png";
 import { FormValidator } from "./FormValidator.js";
 import { Card } from "./Card.js";
 import { closePopUp } from "./utils.js";
+
+//leer foto de perfil
+const stepsImage = document.getElementById("profile__avatar-image");
+stepsImage.src = stepsSrc;
 
 //Seccion de profile
 const profileName = document.querySelector(".profile__name");
