@@ -1,8 +1,8 @@
-import "./styles/index.css"; // agrega la importación del archivo principal de hojas de estilo
-import stepsSrc from "./images/profile_avatar-foto.png";
-import { FormValidator } from "./FormValidator.js";
-import { Card } from "./Card.js";
-import { closePopUp } from "./utils.js";
+import "./index.css"; // agrega la importación del archivo principal de hojas de estilo
+import stepsSrc from "../images/profile_avatar-foto.png";
+import { FormValidator } from "../components/FormValidator.js";
+import { Card } from "../components/Card.js";
+import { closePopUp } from "../components/utils.js";
 
 //leer foto de perfil
 const stepsImage = document.getElementById("profile__avatar-image");
