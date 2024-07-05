@@ -11,7 +11,7 @@
     <meta name="author" content="Braulio Banuelos" />
     <meta name="keywords" content="viaje, foto, EEUU, otros" />
     <!-- <link rel="stylesheet" href="pages/index.css" /> -->
-    <link rel="shortcut icon" href="favicon.ico" />
+    <link rel="shortcut icon" href="./favicon.ico" />
   </head>
   <body class="body">
     <div class="page">
@@ -29,6 +29,7 @@
               class="profile__avatar-image"
               id="profile__avatar-image"
               alt="Profile picture"
+              src="<%= require('./images/profile_avatar-foto.png')%>"
             />
           </div>
           <!--0. DATA -->
@@ -46,9 +47,13 @@
       <!--1. POPUP PROFILE -->
       <div class="popup" id="popup-profile">
         <div class="popup__overlay" id="popup-overlay-edit"></div>
-        <div class="popup__container">
+        <div class="popup__container" id="edit-popup__container">
           <h2 class="popup__title">Editar Perfil</h2>
-          <form class="popup__edit" id="popup__edit-form" novalidate>
+          <form
+            class="popup__edit popup__edit-form"
+            id="popup__edit-form"
+            novalidate
+          >
             <input
               class="popup__input popup__input-name"
               type="text"
@@ -89,9 +94,13 @@
       <!--2. POPUP PLACES FORM -->
       <div class="popup" id="place-popup">
         <div class="popup__overlay" id="popup-overlay-add"></div>
-        <div class="popup__container">
+        <div class="popup__container" id="add-popup__container">
           <h2 class="popup__title">Nuevo Lugar</h2>
-          <form class="popup__edit" id="popup__add-form" novalidate>
+          <form
+            class="popup__edit popup__edit-form"
+            id="popup__add-form"
+            novalidate
+          >
             <input
               class="popup__input popup__add-name"
               type="text"
