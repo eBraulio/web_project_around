@@ -1,7 +1,7 @@
-import "./index.css"; // agrega la importación del archivo principal de hojas de estilo
-import { FormValidator } from "../components/FormValidator.js";
-import { Card } from "../components/Card.js";
-import { Section } from "../components/Section.js";
+import "./page/index.css"; // agrega la importación del archivo principal de hojas de estilo
+import { FormValidator } from "./components/FormValidator.js";
+import { Card } from "./components/Card.js";
+import { Section } from "./components/Section.js";
 import {
   initialCards,
   formElement,
@@ -10,10 +10,10 @@ import {
   addFormElment,
   addButton,
   editButton,
-} from "../components/utils.js";
-import { PopupWithImage } from "../components/PopupWithImage.js";
-import { PopupWithForm } from "../components/PopupWithForm.js";
-import { UserInfo } from "../components/UserInfo.js";
+} from "./components/utils.js";
+import { PopupWithImage } from "./components/PopupWithImage.js";
+import { PopupWithForm } from "./components/PopupWithForm.js";
+import { UserInfo } from "./components/UserInfo.js";
 
 // Cards iniciales
 const popupImage = new PopupWithImage("#image-popup");
@@ -72,7 +72,7 @@ const userInfo = new UserInfo({
 
 const popupWithFormEdit = new PopupWithForm((data) => {
   userInfo.setUserInfo(data);
-}, "#edit-popup__container");
+}, "#popup-profile");
 
 editButton.addEventListener("click", () => {
   popupWithFormEdit.open();
@@ -91,7 +91,8 @@ const popupWithFormAdd = new PopupWithForm((inputValues) => {
   );
   const cardElment = newCard.generateCard();
   elementCard.insertBefore(cardElment, elementCard.firstChild);
-}, "#add-popup__container"); //check!
+}, "#place-popup"); //ok
+
 addButton.addEventListener("click", () => {
   popupWithFormAdd.open();
 });

@@ -1,4 +1,7 @@
 const fade = document.querySelector(".popup__overlay");
+const closeOverlayEdit = document.querySelector("#popup-overlay-edit");
+const closeOverlayAdd = document.querySelector("#popup-overlay-add");
+const closeOverlayImage = document.querySelector("#popup-overlay-image");
 
 export class Popup {
   constructor(popupElements) {
