@@ -1,44 +1,68 @@
-const fade = document.querySelector(".popup__overlay");
-const closeOverlayEdit = document.querySelector("#popup-overlay-edit");
-const closeOverlayAdd = document.querySelector("#popup-overlay-add");
-const closeOverlayImage = document.querySelector("#popup-overlay-image");
-
-export class Popup {
-  constructor(popupElements) {
-    this.popup = document.querySelector(popupElements);
+import {
+  closeFormButton,
+  closeShowImageButton,
+  closeAddPlaceButton,
+} from "./utils.js";
+export default class Popup {
+  constructor(popupSelector) {
+    this._popupElement = document.querySelector(popupSelector);
+    // this._overlay = document.querySelector(".popup__overlay"); //check
+    this._overlayEdit = document.querySelector("#popup-overlay-edit");
+    this._overlayAdd = document.querySelector("#popup-overlay-add");
+    this._overlayImage = document.querySelector("#popup-overlay-image");
   }
-
   open() {
-    this.popup.classList.add("popup__opened");
-    fade.classList.add("active");
-    this._handleEscClose();
+    this._popupElement.classList.add("popup__opened");
+    // this._overlay.classList.add("popup__overlay-opened");
+    this._overlayEdit.classList.add("popup__overlay-opened");
+    this._overlayAdd.classList.add("popup__overlay-opened");
+    this._overlayImage.classList.add("popup__overlay-opened");
   }
-
   close() {
-    this.popup.classList.remove("popup__opened");
-    fade.classList.remove("active");
+    this._popupElement.classList.remove("popup__opened");
+    // this._overlay.classList.remove("popup__overlay-opened");
+    this._overlayEdit.classList.remove("popup__overlay-opened");
+    this._overlayAdd.classList.remove("popup__overlay-opened");
+    this._overlayImage.classList.remove("popup__overlay-opened");
   }
+  _handleEscClose(evt) {
+    if (evt.key === "Escape") {
+      this.close();
+    }
+  }
+  setEventListeners() {
+    // this._overlay.addEventListener("click", () => {
+    //   this.close();
+    // });
+    this._overlayEdit.addEventListener("click", () => {
+      this.close();
+    });
+    this._overlayAdd.addEventListener("click", () => {
+      this.close();
+    });
+    this._overlayImage.addEventListener("click", () => {
+      this.close();
+    });
+    //Opcion 1
+    // closeFormButton.forEach((closeButton) => {
+    //   closeButton.addEventListener("click", () => {
+    //     this.close();
+    //   });
+    // });
+    // Opcion 2
+    // closeAddPlaceButton.addEventListener("click", () => {
+    //   this.close();
+    // });
+    // Opcion 3
+    //     this.closeFormButton.addEventListener("click", () => {
+    //       this.close();
+    //     });
 
-  _handleEscClose() {
+    closeShowImageButton.addEventListener("click", () => {
+      this.close();
+    });
     document.addEventListener("keydown", (evt) => {
-      if (evt.key === "Escape") {
-        this.close();
-      }
-    });
-  }
-
-  setEventListener() {
-    const closeButton = this.popup.querySelector(".popup__close-button");
-
-    closeButton.addEventListener("click", (evt) => {
-      evt.preventDefault();
-      this.close();
-      closeButton.removeEventListener("click", this.close());
-    });
-    fade.addEventListener("click", (evt) => {
-      evt.preventDefault();
-      this.close();
-      fade.removeEventListener("click", this.close());
+      this._handleEscClose(evt);
     });
   }
 }

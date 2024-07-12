@@ -1,8 +1,3 @@
-export const editButton = document.querySelector(".profile__edit-button");
-export const formElement = document.querySelector("#popup__edit-form");
-
-export const addButton = document.querySelector(".profile__add-button");
-export const addFormElment = document.querySelector("#popup__add-form");
 export const initialCards = [
   {
     name: "Detroit Downtown",
@@ -29,7 +24,33 @@ export const initialCards = [
     link: "https://images.unsplash.com/photo-1581373449483-37449f962b6c?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
 ];
+export const elementContainder = document.querySelector(".elements");
+export const popupOpenImage = document.querySelector("#image-popup");
+export const closeShowImageButton = document.querySelector(
+  ".popup__close-image"
+);
+//
+export const closeAddPlaceButton = document.querySelector("#btn-close-place");
 
-//Constantes para Cards
-export const elementCard = document.querySelector("#template__elements");
-export const formElementCard = document.querySelector("#popup__add-form");
+//
+
+export const profileButton = document.querySelector(".profile__edit-button");
+export const profileAddButton = document.querySelector(".profile__add-button");
+export const closeFormButton = document.querySelectorAll(".popup__close-form");
+export const formList = Array.from(
+  document.querySelectorAll(".popup__edit-form")
+);
+
+//export const formList = document.querySelector(".popup__edit-form"); //definition changed
+export const saveProfileButton = document.querySelector(".popup__save-button");
+export const addImageButton = document.querySelector("#btn-submit-place");
+export const formInputName = document.querySelector("#popup__add-name");
+export const formInputAboutme = document.querySelector("#popup__add-adress");
+export const settings = {
+  formSelector: "#popup__edit-form",
+  inputSelector: ".popup__input",
+  submitButtonSelector: ".popup__save-button",
+  inactiveButtonClass: "popup__button-disabled",
+  inputErrorClass: "popup__input_type_error",
+  errorClass: "popup__input_type_error",
+};
