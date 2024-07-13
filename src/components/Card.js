@@ -5,7 +5,7 @@ export default class Card {
     this._link = link;
     this.handleCardClick = handleCardClick;
   }
-
+  //Función para clonar plantilla
   _getTemplate() {
     this._cardElement = document
       .querySelector("#template__elements")

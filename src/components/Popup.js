@@ -44,11 +44,11 @@ export default class Popup {
       this.close();
     });
     //Opcion 1
-    // closeFormButton.forEach((closeButton) => {
-    //   closeButton.addEventListener("click", () => {
-    //     this.close();
-    //   });
-    // });
+    closeFormButton.forEach((closeButton) => {
+      closeButton.addEventListener("click", () => {
+        this.close();
+      });
+    });
     // Opcion 2
     // closeAddPlaceButton.addEventListener("click", () => {
     //   this.close();

@@ -68,7 +68,7 @@ const popupAddImage1 = new PopupWithForm("#place-popup", (inputs) => {
   const addCardElement = new Card(inputs.place, inputs.url);
   const cardElement = addCardElement.generateCard();
   popupAddImage1.close();
-  //elementContainder.prepend(cardElement);
+  elementContainder.prepend(cardElement);
 });
 
 profileButton.addEventListener("click", () => {
