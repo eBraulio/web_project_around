@@ -42,10 +42,12 @@ export const formList = Array.from(
 );
 
 //export const formList = document.querySelector(".popup__edit-form"); //definition changed
-export const saveProfileButton = document.querySelector(".popup__save-button");
-export const addImageButton = document.querySelector("#btn-submit-place");
-export const formInputName = document.querySelector("#popup__add-name");
-export const formInputAboutme = document.querySelector("#popup__add-adress");
+export const saveProfileButton = document.querySelector("#btn-close-profile"); //
+export const addImageButton = document.querySelector("#btn-submit-place"); //
+export const formInputName = document.querySelector("#popup__input-name");
+export const formInputAboutme = document.querySelector(
+  "#popup__input-description"
+);
 export const settings = {
   formSelector: "#popup__edit-form",
   inputSelector: ".popup__input",
