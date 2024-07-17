@@ -17,15 +17,16 @@ import {
 } from "../components/utils.js";
 import PopupWithImage from "../components/PopupWithImage.js";
 
+const popupImage = new PopupWithImage("#image-popup");
+popupImage.setEventListeners();
+
 const cardList = new Section(
   {
     items: initialCards,
     renderer: (item) => {
-      const popupImage = new PopupWithImage("#image-popup");
       const card = new Card(item.name, item.link, popupImage.handleCardClick);
       const cardElement = card.generateCard();
       cardList.addItem(cardElement);
-      popupImage.setEventListeners();
     },
   },
   elementContainder
@@ -62,7 +63,11 @@ const popupProfile1 = new PopupWithForm("#popup-profile", (inputs) => {
 });
 
 const popupAddImage1 = new PopupWithForm("#place-popup", (inputs) => {
-  const addCardElement = new Card(inputs.place, inputs.url);
+  const addCardElement = new Card(
+    inputs.place,
+    inputs.url,
+    popupImage.handleCardClick
+  );
   const cardElement = addCardElement.generateCard();
   popupAddImage1.close();
   elementContainder.prepend(cardElement);
