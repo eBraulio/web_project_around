@@ -1,4 +1,6 @@
 import { popupOpenImage, closeShowImageButton } from "./utils";
+import { handleCardClick } from "./PopupWithImage";
+
 export default class Card {
   constructor(name, link, handleCardClick) {
     this._name = name;
@@ -33,7 +35,8 @@ export default class Card {
     this._card.remove();
   }
   handleOpenCard() {
-    this.handleCardClick(this._cardTitle, this._link);
+    console.log(this._cardTitle, this._cardImage.src);
+    this.handleCardClick(this._cardTitle, this._cardImage.src);
   }
 
   _setEventListeners() {

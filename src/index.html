@@ -10,7 +10,6 @@
     />
     <meta name="author" content="Braulio Banuelos" />
     <meta name="keywords" content="viaje, foto, EEUU, otros" />
-    <!-- <link rel="stylesheet" href="pages/index.css" /> -->
     <link rel="shortcut icon" href="./favicon.ico" />
   </head>
   <body class="body">
@@ -45,8 +44,6 @@
         </section>
         <section class="elements" id="elements"></section>
       </main>
-      <!-- <div class="popup-overlay-edit popup-overlay-add image-popup"></div> -->
-      <!-- <div class="popup__overlay" id="popup__overlay"></div> -->
       <!--1. POPUP PROFILE -->
       <div class="popup" id="popup-profile">
         <div class="popup__overlay" id="popup-overlay-edit"></div>
@@ -178,7 +175,10 @@
         <h2 class="footer-copyright">&#169;2024 Braulio Bañuelos</h2>
       </footer>
     </div>
-    <script src="./index.js" type="module"></script>
-    <!-- <script src="./src/utils.js" type="module"></script> -->
+    <script src="./index.js" type="module">
+      function ReloadLocation() {
+            location.reload();
+        }
+    </script>
   </body>
 </html>

@@ -17,9 +17,6 @@ import {
 } from "../components/utils.js";
 import PopupWithImage from "../components/PopupWithImage.js";
 
-// const logoImage = document.getElementById("header-logo");
-// logoImage.src = logoSrc;
-
 const cardList = new Section(
   {
     items: initialCards,

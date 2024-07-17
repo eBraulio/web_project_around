@@ -41,7 +41,6 @@ export const formList = Array.from(
   document.querySelectorAll(".popup__edit-form")
 );
 
-//export const formList = document.querySelector(".popup__edit-form"); //definition changed
 export const saveProfileButton = document.querySelector("#btn-close-profile"); //
 export const addImageButton = document.querySelector("#btn-submit-place"); //
 export const formInputName = document.querySelector("#popup__input-name");
