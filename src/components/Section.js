@@ -5,7 +5,7 @@ export default class Section {
     this._container = cardContainer;
   }
 
-  renderItems() {
+  renderer() {
     this._renderedItems.forEach((item) => {
       this._renderer(item);
     });

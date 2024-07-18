@@ -64,5 +64,14 @@ Git Hub fue usada como herramienta para organizar y actualizar el proyecto en el
 - Evitar subir form con Enter aún cuando los campos no pasen la validación
 - Importar las clases Card y FormValidator en script.js
 
+17/07/2024:
+
+- Se agregan funcionalidades del Sprint 9.
+- Las clases Section, Popup, PopupWithImage, PopupWithForm, UserInfo, fueron creadas.
+- Clases Card y FormValidator se transformaron para funcionar con las nuevas clases, y se encuentran funcionando correctamente.
+- Corrección de error cuando se abre el popup image de una card agregada mediante el formulario.
+- Creación del archivo .gitignore
+- Configurar el empaquetado (bundling) y creación (building) de Webpack.
+
 \*Link en GitHub:
-https://eBraulio.github.io/web_project_around/
+https://eBraulio.github.io/web_project_around/ (no funciona actualmente, se corregirá en próximos sprints con Backend)

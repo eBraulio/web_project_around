@@ -1,8 +1,5 @@
-import {
-  closeFormButton,
-  closeShowImageButton,
-  closeAddPlaceButton,
-} from "./utils.js";
+import { closeFormButton, closeShowImageButton } from "./utils.js";
+
 export default class Popup {
   constructor(popupSelector) {
     this._popupElement = document.querySelector(popupSelector);
@@ -43,7 +40,6 @@ export default class Popup {
         this.close();
       });
     });
-
     closeShowImageButton.addEventListener("click", () => {
       this.close();
     });

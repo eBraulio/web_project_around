@@ -29,18 +29,13 @@ export const popupOpenImage = document.querySelector("#image-popup");
 export const closeShowImageButton = document.querySelector(
   ".popup__close-image"
 );
-//
 export const closeAddPlaceButton = document.querySelector("#btn-close-place");
-
-//
-
 export const profileButton = document.querySelector(".profile__edit-button");
 export const profileAddButton = document.querySelector(".profile__add-button");
 export const closeFormButton = document.querySelectorAll(".popup__close-form");
 export const formList = Array.from(
   document.querySelectorAll(".popup__edit-form")
 );
-
 export const saveProfileButton = document.querySelector("#btn-close-profile"); //
 export const addImageButton = document.querySelector("#btn-submit-place"); //
 export const formInputName = document.querySelector("#popup__input-name");

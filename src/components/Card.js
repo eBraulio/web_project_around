@@ -1,11 +1,8 @@
-import { popupOpenImage, closeShowImageButton } from "./utils";
-import { handleCardClick } from "./PopupWithImage";
-
 export default class Card {
   constructor(name, link, handleCardClick) {
     this._name = name;
     this._link = link;
-    this.handleCardClick = handleCardClick;
+    this.open = handleCardClick;
   }
   //Función para clonar plantilla
   _getTemplate() {
@@ -34,9 +31,8 @@ export default class Card {
   _handleDeleteBtn() {
     this._card.remove();
   }
-  handleOpenCard() {
-    console.log(this._cardTitle, this._cardImage.src);
-    this.handleCardClick(this._cardTitle, this._cardImage.src);
+  handleCardClick() {
+    this.open(this._cardTitle, this._cardImage.src);
   }
 
   _setEventListeners() {
@@ -47,7 +43,7 @@ export default class Card {
       this._handleDeleteBtn();
     });
     this._cardImage.addEventListener("click", () => {
-      this.handleOpenCard();
+      this.handleCardClick();
     });
   }
 

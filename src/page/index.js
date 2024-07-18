@@ -1,5 +1,4 @@
 import "./index.css";
-import logoSrc from "../images/vector/header__logo.svg";
 import Card from "../components/Card.js";
 import FormValidator from "../components/FormValidator.js";
 import Section from "../components/Section.js";
@@ -31,7 +30,7 @@ const cardList = new Section(
   },
   elementContainder
 );
-cardList.renderItems();
+cardList.renderer();
 
 function validationForm() {
   formList.forEach((formElement) => {
