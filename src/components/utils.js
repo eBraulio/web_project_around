@@ -45,7 +45,7 @@ export const formInputAboutme = document.querySelector(
 export const settings = {
   formSelector: "#popup__edit-form",
   inputSelector: ".popup__input",
-  submitButtonSelector: ".form__button",
+  submitButtonSelector: ".popup__button",
   inactiveButtonClass: "popup__button-disabled",
   inputErrorClass: "popup__input_type_error",
   errorClass: "popup__input_type_error",
