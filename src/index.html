@@ -35,10 +35,10 @@
           <!--0. DATA -->
           <div class="profile__info">
             <div class="profile__info-container">
-              <p class="profile__name">Jacques Cousteau</p>
+              <p class="profile__name"></p>
               <button class="profile__edit-button" type="button"></button>
             </div>
-            <p class="profile__description">Explorador</p>
+            <p class="profile__description"></p>
           </div>
           <button class="profile__add-button" type="button"></button>
         </section>
@@ -67,7 +67,7 @@
             <span class="popup__error" id="popup__input-name-error"></span>
             <input
               class="popup__input popup__input-description"
-              name="aboutme"
+              name="about"
               type="text"
               id="popup__input-description"
               value="Explorador"
@@ -107,7 +107,7 @@
             <input
               class="popup__input popup__add-name"
               type="text"
-              name="place"
+              name="name"
               id="popup__add-name"
               placeholder="Título"
               minlength="2"
@@ -118,7 +118,7 @@
             <input
               class="popup__input popup__add-adress"
               type="url"
-              name="url"
+              name="link"
               id="popup__add-adress"
               placeholder="Enlace a la imagen"
               required
@@ -148,6 +148,54 @@
           <p class="popup__element-title"></p>
         </div>
       </div>
+      <!--5. Popup Avatar -->
+      <section class="popup" id="popup-avatar-profile">
+        <div class="popup__container">
+          <div class="popup__close-button"></div>
+          <h2 class="popup__title">Cambiar foto de perfil</h2>
+          <form
+            name="profile-avatar-form"
+            class="popup__form popup__form_avatar-profile popup__edit-form"
+          >
+            <input
+              type="url"
+              class="popup__input popup__form-input popup__form-input_type_link"
+              id="avatar-link"
+              name="avatarLink"
+              placeholder="Enlace a la imagen"
+              required
+            />
+            <span class="popup__form-error-message avatar-link-error"></span>
+            <button
+              type="submit"
+              value="submit"
+              class="popup__form-button popup__save-button"
+            >
+              Guardar
+            </button>
+          </form>
+        </div>
+      </section>
+      <!--6. Delete confirmation -->
+      <section class="popup" id="popup-delete-confirmation">
+        <div class="popup__container popup__container_type_delete-confirmation">
+          <div class="popup__close-button"></div>
+          <h2 class="popup__title">¿Estás segur@?</h2>
+          <form
+            name="delete-confirmation-form"
+            class="popup__form popup__form_delete-confirmation"
+          >
+            <button
+              type="submit"
+              value="submit"
+              class="popup__form-button popup__save-button"
+            >
+              Sí
+            </button>
+          </form>
+        </div>
+      </section>
+
       <!--4.  ELEMENTS TEMPLATE -->
       <template id="template__elements">
         <div class="template__element">
@@ -166,7 +214,9 @@
           </div>
           <div class="element__button">
             <h2 class="element__text"></h2>
+
             <div class="element__like-button"></div>
+            <span class="element__like-number"></span>
           </div>
         </div>
       </template>

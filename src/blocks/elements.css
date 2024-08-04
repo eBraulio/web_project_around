@@ -69,6 +69,10 @@
   overflow: hidden;
 }
 
+.element__like-number {
+  color: black;
+}
+
 .element__like-button {
   background-image: url(../images/vector/like-icon.svg);
   width: 21px;
