@@ -25,6 +25,14 @@
   z-index: 1000;
 }
 
+.popup__container-avatar {
+  min-height: auto;
+}
+
+.popup__container_type_delete-confirmation {
+  min-height: auto;
+}
+
 .popup__title {
   font-family: Inter;
   line-height: 29px;
@@ -133,6 +141,11 @@
   top: -41px;
   right: -41px;
 }
+
+/* .popup__close-confirmation {
+  top: 250px;
+  right: 680px;
+} */
 
 .popup__close-button:hover {
   opacity: 60%;

@@ -24,6 +24,7 @@
       </header>
       <main class="content">
         <section class="profile">
+          <!-- 00. Avatar -->
           <div class="profile__avatar">
             <img
               class="profile__avatar-image"
@@ -31,6 +32,11 @@
               alt="Profile picture"
               src="<%= require('./images/profile_avatar-foto.png')%>"
             />
+            <button
+              title="editar-foto-perfil"
+              class="profile__avatar-button-edit"
+              type="button"
+            ></button>
           </div>
           <!--0. DATA -->
           <div class="profile__info">
@@ -149,41 +155,48 @@
         </div>
       </div>
       <!--5. Popup Avatar -->
-      <section class="popup" id="popup-avatar-profile">
-        <div class="popup__container">
-          <div class="popup__close-button"></div>
+      <div class="popup" id="popup-avatar-profile">
+        <div class="popup__overlay" id="popup-overlay-avatar"></div>
+        <div class="popup__container popup__container-avatar">
           <h2 class="popup__title">Cambiar foto de perfil</h2>
           <form
             name="profile-avatar-form"
-            class="popup__form popup__form_avatar-profile popup__edit-form"
+            class="popup__edit popup__edit-form popup__form popup__form_avatar-profile"
           >
             <input
               type="url"
               class="popup__input popup__form-input popup__form-input_type_link"
-              id="avatar-link"
+              id="popup__avatar-image"
               name="avatarLink"
               placeholder="Enlace a la imagen"
               required
             />
-            <span class="popup__form-error-message avatar-link-error"></span>
+            <span
+              class="popup__error popup__form-error-message avatar-link-error"
+              id="popup__avatar-image-error"
+            ></span>
             <button
               type="submit"
               value="submit"
-              class="popup__form-button popup__save-button"
+              class="popup__form-button popup__save-button popup__button"
             >
               Guardar
             </button>
+            <button
+              class="popup__close-button popup__close-form"
+              type="button"
+            ></button>
           </form>
         </div>
-      </section>
+      </div>
       <!--6. Delete confirmation -->
-      <section class="popup" id="popup-delete-confirmation">
+      <div class="popup" id="popup-delete-confirmation">
+        <div class="popup__overlay" id="popup-overlay-confirmation"></div>
         <div class="popup__container popup__container_type_delete-confirmation">
-          <div class="popup__close-button"></div>
-          <h2 class="popup__title">¿Estás segur@?</h2>
+          <h2 class="popup__title">¿Estás seguro?</h2>
           <form
             name="delete-confirmation-form"
-            class="popup__form popup__form_delete-confirmation"
+            class="popup__edit popup__edit-form popup__form popup__form_delete-confirmation"
           >
             <button
               type="submit"
@@ -192,9 +205,14 @@
             >
               Sí
             </button>
+            <button
+              class="popup__close-button popup__close-confirmation popup__close-form"
+              id="popup__close-confirmation"
+              type="button"
+            ></button>
           </form>
         </div>
-      </section>
+      </div>
 
       <!--4.  ELEMENTS TEMPLATE -->
       <template id="template__elements">
@@ -214,9 +232,10 @@
           </div>
           <div class="element__button">
             <h2 class="element__text"></h2>
-
-            <div class="element__like-button"></div>
-            <span class="element__like-number"></span>
+            <div class="element__container">
+              <div class="element__like-button"></div>
+              <span class="element__like-number"></span>
+            </div>
           </div>
         </div>
       </template>

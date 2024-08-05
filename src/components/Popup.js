@@ -6,18 +6,26 @@ export default class Popup {
     this._overlayEdit = document.querySelector("#popup-overlay-edit");
     this._overlayAdd = document.querySelector("#popup-overlay-add");
     this._overlayImage = document.querySelector("#popup-overlay-image");
+    this._overlayConfirmation = document.querySelector(
+      "#popup-overlay-confirmation"
+    );
+    this._overlayAvatar = document.querySelector("#popup-overlay-avatar");
   }
   handleOpen() {
     this._popupElement.classList.add("popup__opened");
     this._overlayEdit.classList.add("popup__overlay-opened");
     this._overlayAdd.classList.add("popup__overlay-opened");
     this._overlayImage.classList.add("popup__overlay-opened");
+    this._overlayConfirmation.classList.add("popup__overlay-opened");
+    this._overlayAvatar.classList.add("popup__overlay-opened");
   }
   handleClose() {
     this._popupElement.classList.remove("popup__opened");
     this._overlayEdit.classList.remove("popup__overlay-opened");
     this._overlayAdd.classList.remove("popup__overlay-opened");
     this._overlayImage.classList.remove("popup__overlay-opened");
+    this._overlayConfirmation.classList.remove("popup__overlay-opened");
+    this._overlayAvatar.classList.remove("popup__overlay-opened");
   }
   _handleEscapeKey(evt) {
     if (evt.key === "Escape") {
@@ -32,6 +40,12 @@ export default class Popup {
       this.handleClose();
     });
     this._overlayImage.addEventListener("click", () => {
+      this.handleClose();
+    });
+    this._overlayConfirmation.addEventListener("click", () => {
+      this.handleClose();
+    });
+    this._overlayAvatar.addEventListener("click", () => {
       this.handleClose();
     });
     //Opcion 1

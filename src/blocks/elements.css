@@ -52,6 +52,7 @@
   text-align: left;
   margin: 25px 15px 31px 21px;
   padding: 0;
+  justify-content: space-between;
 }
 
 .element__text {
@@ -67,6 +68,11 @@
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
+}
+
+.element__container {
+  flex-direction: column;
+  text-align: center;
 }
 
 .element__like-number {
