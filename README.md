@@ -1,8 +1,8 @@
 # Tripleten web_project_around
 
-\*Página desarrollada para el Sprint 7 "Manejo de objetos y eventos en JavaScript", del curso de WEB Developer de TRIPLETEN.
+\*Página desarrollada para el Sprint 10 "JavaScript asíncrono y trabajar con APIs", del curso de WEB Developer de TRIPLETEN.
 
-\*Esta pàgina WEB fue desarrolada como proyecto final del séptimo sprint del curso de Web Developer.
+\*Esta pàgina WEB fue desarrolada como proyecto final del décimo sprint del curso de Web Developer.
 Fue creada utilizando HTML y CSS, considerando el diseño compartido en Figma, y aplicando la metodología BEM, así como grid layout y flexbox.
 La página web se desarrolló de forma adaptativa para ser visualizada en dispositivos desktop, tablets y mobiles, con óptimización en 320, 768 y 1280 px.
 Git Hub fue usada como herramienta para organizar y actualizar el proyecto en el repositorio en línea.
@@ -22,6 +22,7 @@ Git Hub fue usada como herramienta para organizar y actualizar el proyecto en el
 - DOM
 - GitHub
   -Validación de formularios
+
 
 \*Planes a futuro:
 
