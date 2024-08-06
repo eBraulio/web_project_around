@@ -73,5 +73,19 @@ Git Hub fue usada como herramienta para organizar y actualizar el proyecto en el
 - Creación del archivo .gitignore
 - Configurar el empaquetado (bundling) y creación (building) de Webpack.
 
+05/08/2024:
+
+- Se agregan funcionalidades del Sprint 10:
+- Cargar la información del usuario desde el servidor. IMPLEMENTADO
+- Cargar las tarjetas desde el servidor. IMPLEMENTADO
+- Editar el perfil. IMPLEMENTADO
+- Añadir una nueva tarjeta. IMPLEMENTADO
+- Mostrar cuántos "me gusta" tiene una tarjeta. IMPLEMENTADO
+- Crear una ventana emergente (popup) para borrar una tarjeta. IMPLEMENTADO
+- Borrar una tarjeta. IMPLEMENTADO
+- Añadir y eliminar "me gustas". IMPLEMENTADO
+- Actualizar la foto de perfil. IMPLEMENTADO
+- Mejorar de la experiencia de usuario en todos los formularios. IMPLEMENTADO
+
 \*Link en GitHub:
 https://eBraulio.github.io/web_project_around/ (no funciona actualmente, se corregirá en próximos sprints con Backend)

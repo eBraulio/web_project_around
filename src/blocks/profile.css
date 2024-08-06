@@ -50,6 +50,7 @@
 .profile__info-container {
   display: flex;
   align-items: baseline;
+  font-family: Inter;
 }
 
 .profile__name {
@@ -57,7 +58,7 @@
   font-family: Inter;
   font-size: 42px;
   font-weight: 500;
-  line-height: 113%;
+  line-height: 133%;
   text-align: left;
   margin: 0;
   text-overflow: ellipsis;
@@ -96,7 +97,7 @@
   text-overflow: ellipsis;
   max-width: 372px;
   margin: 16px auto auto 0;
-
+  font-family: Inter;
   font-weight: 400;
   font-size: 18px;
   line-height: 22px;
@@ -172,6 +173,11 @@
 @media screen and (max-width: 768px) {
   .profile {
     flex-direction: column;
+  }
+
+  .profile__avatar-button-edit {
+    left: 40px;
+    right: auto;
   }
 
   .profile__info {
